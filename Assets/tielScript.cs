@@ -25,7 +25,7 @@ public class tielScript : MonoBehaviour
         }
        
         // tiel out of bounds, game over
-        if(transform.position.y > 12 || transform.position.y < -12)
+        if(transform.position.y > 11 || transform.position.y < -11)
         {
             gameOverScreen.SetActive(true);
         }
