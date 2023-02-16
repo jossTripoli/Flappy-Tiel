@@ -9,14 +9,14 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
-    public AudioSource dinkSFX;
+    public AudioSource source;
 
-    [ContextMenu("Increase Score")]
+    // [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
+        source.Play();
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
-        dinkSFX.Play();
     }
 
     public void restartGame() 
