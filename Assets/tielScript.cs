@@ -8,6 +8,7 @@ public class tielScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
+    public GameObject gameOverScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,11 @@ public class tielScript : MonoBehaviour
             myRigidbody.velocity = Vector2.up * flapStrength;
         }
        
+        // tiel out of bounds, game over
+        if(transform.position.y > 12 || transform.position.y < -12)
+        {
+            gameOverScreen.SetActive(true);
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

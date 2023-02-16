@@ -263,6 +263,7 @@ MonoBehaviour:
   flapStrength: 6
   logic: {fileID: 0}
   birdIsAlive: 1
+  gameOverScreen: {fileID: 856375616}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
