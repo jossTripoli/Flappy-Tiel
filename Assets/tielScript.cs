@@ -28,6 +28,7 @@ public class tielScript : MonoBehaviour
         if(transform.position.y > 11 || transform.position.y < -11)
         {
             gameOverScreen.SetActive(true);
+            logic.gameOver();
         }
     }
 
