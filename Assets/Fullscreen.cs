@@ -6,7 +6,7 @@ public class Fullscreen : MonoBehaviour
 {
     public void Change()
     {
+        Debug.Log("FULLSCREEN");
         Screen.fullScreen = !Screen.fullScreen;
-        print("changed screen mode");
     }
 }
