@@ -11,6 +11,8 @@ public class LogicScript : MonoBehaviour
     public Text highScoreText;
     public GameObject gameOverScreen;
     public AudioSource source;
+    public AudioSource highScoreSound;
+
     // create singleton so can access from other scripts
 
     void Start()
@@ -39,6 +41,7 @@ public class LogicScript : MonoBehaviour
     {
         if(playerScore > highScore)
         {
+            highScoreSound.Play();
             highScore = playerScore;
             highScoreText.text = highScore.ToString();
 
@@ -62,4 +65,5 @@ public class LogicScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
 }
