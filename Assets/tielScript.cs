@@ -25,10 +25,11 @@ public class tielScript : MonoBehaviour
         }
        
         // tiel out of bounds, game over
-        if(transform.position.y > 11 || transform.position.y < -11)
+        if(transform.position.y > 13 || transform.position.y < -13)
         {
             gameOverScreen.SetActive(true);
             logic.gameOver();
+            birdIsAlive = false;
         }
     }
 
